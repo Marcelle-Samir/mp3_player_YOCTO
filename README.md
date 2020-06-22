@@ -42,6 +42,6 @@ You can check the references for further help on how they are created.
 
 **paths variables**
 
--https://git.yoctoproject.org/cgit.cgi/poky/plain/meta/conf/bitbake.conf
+- https://git.yoctoproject.org/cgit.cgi/poky/plain/meta/conf/bitbake.conf
 
 
