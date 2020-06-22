@@ -34,6 +34,14 @@ You can check the references for further help on how they are created.
 
 ## References
 
+- https://www.yoctoproject.org/docs/3.0.2/mega-manual/mega-manual.html
+
 **Networking**
 
 - https://hub.mender.io/t/how-to-configure-networking-using-systemd-in-yocto-project/1097
+
+**paths variables**
+
+-https://git.yoctoproject.org/cgit.cgi/poky/plain/meta/conf/bitbake.conf
+
+
