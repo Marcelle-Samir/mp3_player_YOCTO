@@ -44,4 +44,6 @@ You can check the references for further help on how they are created.
 
 - https://git.yoctoproject.org/cgit.cgi/poky/plain/meta/conf/bitbake.conf
 
+**other commands**
+- https://gist.github.com/gemad/b870ae57e7a2391b0e9b5a0146e2ac29
 
