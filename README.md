@@ -8,7 +8,7 @@ This project is a Yocto layer implementation for an mp3 player
 
 - Create a Folder named (let's name it YOCTO)
 
-then, in that folder start to get the elementary layers:
+then, in that folder start to get the elementary layers
 
 > git clone git://git.yoctoproject.org/poky -b zeus \ 
 > git clone https://github.com/openembedded/meta-openembedded -b zeus \ 
