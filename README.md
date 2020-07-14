@@ -75,7 +75,7 @@ You can check the references for further help on how they are created.
 
 ### sound
 
-We're using alsa, pulseaduio, sox and lame
+We're using alsa, pulseaudio, sox and lame
 
 **NOTE** pulseaudio is backfilled so we don't need to add it manually
 
