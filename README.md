@@ -20,7 +20,7 @@ then, in that folder start to get the elementary layers
 
 > source pokey/oe-init-build-env [output directory name let's name it rpi-build]
 
-- now you need to add this layers to your YOCTO/rpi-build/bblayers.conf file, it will look like:
+- now you need to add this layers manually to your YOCTO/rpi-build/bblayers.conf file, it will look like:
 
 **NOTE:** remember to check the extra layers dependencies \
 (like meta-raspberrypi dependencies, you will find them in its README: "meta-oe, meta-multimedia, meta-networking, meta-python")
@@ -36,6 +36,12 @@ then, in that folder start to get the elementary layers
 >  /home/$USER/Yocto/meta-raspberrypi \ \
 >  /home/$USER/Yocto/meta-mp3_player \ \
 >  "
+
+**NOTE** you can use this command to add layers instead of the previous manual method
+>bitbake-layers add-layer [layer's full directory]
+
+to check the sucsessfully added layers
+>bitbake-layers show-layers
 
 and you need to change the machine variable at YOCTO/rpi-build/local.conf file to MACHINE ?= "raspberrypi3"
 
