@@ -10,9 +10,9 @@ This project is a Yocto layer implementation for an mp3 player
 
 then, in that folder start to get the elementary layers
 
->git clone git://git.yoctoproject.org/poky -b zeus \ 
+>git clone git://git.yoctoproject.org/poky -b zeus 
 
->git clone https://github.com/openembedded/meta-openembedded -b zeus \ 
+>git clone https://github.com/openembedded/meta-openembedded -b zeus 
 
 >git clone https://github.com/agherzan/meta-raspberrypi -b zeus 
 
@@ -58,20 +58,46 @@ First, we changed the init manager to systemd. This can be done by adding these 
 
 Also, we need to add WiFi supporting packages:
 
-> DISTRO_FEATURES_append = " wifi "\
+> DISTRO_FEATURES_append = " wifi " \
 > IMAGE_INSTALL_append = " linux-firmware-rpidistro-bcm43430 "
 
 Finally, we need to enable ssh to be able to log into the terminal, and UART for WiFi interface to work.
 
-> EXTRA_IMAGE_FEATURES_append = " ssh-server-openssh allow-empty-password"\
+> EXTRA_IMAGE_FEATURES_append = " ssh-server-openssh allow-empty-password" \
 > ENABLE_UART = "1"
 
 The layer contains 2 recipes:
 
-recipe-core, which sets proper configurations (Static IP) in systemd-conf.\
+recipe-core, which sets proper configurations (Static IP) in systemd-conf. \
 recipe-connectivity, which determines configuration for wpa_supplicant (Network and Password).
 
 You can check the references for further help on how they are created.
+
+### sound
+
+We're using alsa, pulseaduio, sox and lame
+
+**NOTE** pulseaudio is backfilled so we don't need to add it manually
+
+**NOTE** we are using sox because of the bluetooth and as you know sox dosn't support mp3 tracks, so we needed lame 
+
+- to add alsa add those to YOCTO/rpi-build/local.conf file
+
+>MACHINE_FEATURES_append = " alsa" \
+>DISTRO_FEATURES_append = " alsa" \
+>IMAGE_INSTALL_append = " alsa-utils"
+
+- and add those to YOCTO/rpi-build/local.conf file to add sox and lame
+
+>IMAGE_INSTALL_append = " lame"
+
+>IMAGE_INSTALL_append = " sox"
+
+you may need to add this to YOCTO/rpi-build/local.conf for sox license:
+
+> LICENSE_FLAGS_WHITELIST="commercial"
+
+ 
 
 https://docs.google.com/document/d/1TmUVk_P2_C1ha5NE5x72geAaHcmcuYk9X0hENDnPoNM/edit
 
