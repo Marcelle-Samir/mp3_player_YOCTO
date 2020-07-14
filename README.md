@@ -10,9 +10,11 @@ This project is a Yocto layer implementation for an mp3 player
 
 then, in that folder start to get the elementary layers
 
-> git clone git://git.yoctoproject.org/poky -b zeus \ 
-> git clone https://github.com/openembedded/meta-openembedded -b zeus \ 
-> git clone https://github.com/agherzan/meta-raspberrypi -b zeus 
+>git clone git://git.yoctoproject.org/poky -b zeus \ 
+
+>git clone https://github.com/openembedded/meta-openembedded -b zeus \ 
+
+>git clone https://github.com/agherzan/meta-raspberrypi -b zeus 
 
 - Source command: *do this command while you are in the main folder (YOCTO)
 
