@@ -103,6 +103,9 @@ you may need to add this to YOCTO/rpi-build/local.conf for sox license:
 
 > LICENSE_FLAGS_WHITELIST="commercial"
 
+try sox using:
+
+> lame --quiet --decode /abtal_el_digital.mp3 - | play -q - &
  
 
 https://docs.google.com/document/d/1TmUVk_P2_C1ha5NE5x72geAaHcmcuYk9X0hENDnPoNM/edit
