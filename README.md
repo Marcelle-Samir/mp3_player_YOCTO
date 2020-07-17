@@ -6,7 +6,7 @@ This project is a Yocto layer implementation for an mp3 player
 
 ### Getting started
 
-- Create a Folder named (let's name it YOCTO)
+- Create a Folder (let's name it YOCTO)
 
 then, in that folder start to get the elementary layers
 
@@ -107,6 +107,9 @@ try sox using:
 
 > lame --quiet --decode /abtal_el_digital.mp3 - | play -q - &
  
+- to add the mp3overlay recipe to your build, add this to your YOCTO/rpi-build/local.conf
+
+>IMAGE_INSTALL_append = " mp3overlay"
 
 https://docs.google.com/document/d/1TmUVk_P2_C1ha5NE5x72geAaHcmcuYk9X0hENDnPoNM/edit
 
