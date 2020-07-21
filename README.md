@@ -125,6 +125,11 @@ https://docs.google.com/document/d/1TmUVk_P2_C1ha5NE5x72geAaHcmcuYk9X0hENDnPoNM/
 
 - https://git.yoctoproject.org/cgit.cgi/poky/plain/meta/conf/bitbake.conf
 
+**systemd service**
+
+- https://hub.mender.io/t/startup-script-for-raspberrypi3-using-yocto/201/7
+
 **other commands**
+
 - https://gist.github.com/gemad/b870ae57e7a2391b0e9b5a0146e2ac29
 
