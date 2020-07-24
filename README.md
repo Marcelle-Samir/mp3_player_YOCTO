@@ -103,13 +103,22 @@ you may need to add this to YOCTO/rpi-build/local.conf for sox license:
 
 > LICENSE_FLAGS_WHITELIST="commercial"
 
-try sox using:
+you can try sox using:
 
 > lame --quiet --decode /abtal_el_digital.mp3 - | play -q - &
  
-- to add the mp3overlay recipe to your build, add this to your YOCTO/rpi-build/local.conf
+- add those to YOCTO/rpi-build/local.conf file to add espeak and portaudio
 
->IMAGE_INSTALL_append = " mp3overlay"
+>MACHINE_FEATURES_append = " portaudio-v19" \
+>DISTRO_FEATURES_append = " portaudio-v19" \
+>IMAGE_INSTALL_append = " portaudio-v19" \
+>IMAGE_INSTALL_append = " espeak"
+ 
+- to add the recipes to your build, add this to your YOCTO/rpi-build/local.conf
+
+>IMAGE_INSTALL_append = " mp3overlay" \
+>IMAGE_INSTALL_append = " initscript" \
+>IMAGE_INSTALL_append = " usbDetection"
 
 https://docs.google.com/document/d/1TmUVk_P2_C1ha5NE5x72geAaHcmcuYk9X0hENDnPoNM/edit
 
