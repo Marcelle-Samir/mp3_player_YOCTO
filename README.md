@@ -6,6 +6,10 @@ This project is a Yocto layer implementation for an mp3 player
 
 ### Getting started
 
+- Check the system requirements:
+  
+[https://docs.yoctoproject.org/ref-manual/system-requirements.html]
+
 - Create a Folder (let's name it YOCTO)
 
 then, in that folder start to get the elementary layers
