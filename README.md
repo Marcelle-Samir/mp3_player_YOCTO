@@ -18,7 +18,7 @@ then, in that folder start to get the elementary layers
 
 - Source command: *do this command while you are in the main folder (YOCTO)
 
-> source pokey/oe-init-build-env [output directory name let's name it rpi-build]
+> source poky/oe-init-build-env [output directory name let's name it rpi-build]
 
 - now you need to add this layers manually to your YOCTO/rpi-build/bblayers.conf file, it will look like:
 
